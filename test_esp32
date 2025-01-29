@@ -1,0 +1,18 @@
+void setup() {
+  // Initialize serial communication at 115200 baud rate.
+  Serial.begin(115200);
+  
+  // Wait for the serial monitor to open
+  while (!Serial) {
+    ; // Do nothing until the serial monitor is connected
+  }
+  
+  // Print a test message to the Serial Monitor
+  Serial.println("Hello from ESP32!");
+}
+
+void loop() {
+  // The ESP32 will continue to print this message once every 1 second
+  Serial.println("ESP32 is working!");
+  delay(1000);  // Wait for 1 second
+}
